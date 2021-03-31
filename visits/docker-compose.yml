@@ -1,0 +1,17 @@
+# version of docker-compose we are using.
+version: '3'
+# Containers:
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    # Restart policy.
+    # "no" - never restart (quotes are a MUST do to YAML syntax!!!)
+    # always - always restart
+    # on-failure - will fire when process.exit > 0
+    # unless-stopped - always restart unless we the developers forcibly stop it.
+    restart: always
+    # Use the Dockerfile in the current directory.
+    build: .
+    ports:
+      - "4001:8081"
