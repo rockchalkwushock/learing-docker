@@ -1,0 +1,9 @@
+{
+  "name": "simple-web",
+  "dependencies": {
+    "express": "*"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
